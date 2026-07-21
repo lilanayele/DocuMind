@@ -1,4 +1,4 @@
- import streamlit as st
+import streamlit as st
 
 from src.document_loader import load_document
 from src.embeddings import get_embeddings
