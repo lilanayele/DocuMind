@@ -21,17 +21,19 @@ if file:
     st.success("PDF uploaded successfully!")
 
     documents = load_document("temp.pdf")
+    st.write("✅ Text extracted")
 
     chunks = split_documents(documents)
+    st.write("✅ Text split")
 
     embeddings = get_embeddings()
+    st.write("✅ Embeddings created")
 
     database = create_database(
         chunks,
         embeddings
     )
-
-    st.success("Document processed!")
+    st.write("✅ Database created")
 
     question = st.text_input(
         "Ask a question about the document"
