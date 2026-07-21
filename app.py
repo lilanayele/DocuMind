@@ -6,7 +6,7 @@ from src.vector_store import split_documents, create_database
 from src.qa import search_document
 
 
-st.title("📄 DocuMind AI")
+st.title("DocuMind")
 
 file = st.file_uploader(
     "Upload PDF",
