@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 
 from src.document_loader import load_document
 from src.embeddings import get_embeddings
@@ -6,7 +6,7 @@ from src.vector_store import split_documents, create_database
 from src.qa import search_document
 
 
-st.title("DocuMind")
+st.title("📄 DocuMind")
 
 file = st.file_uploader(
     "Upload PDF",
@@ -17,6 +17,8 @@ if file:
 
     with open("temp.pdf", "wb") as f:
         f.write(file.read())
+
+    st.success("PDF uploaded successfully!")
 
     documents = load_document("temp.pdf")
 
@@ -29,8 +31,10 @@ if file:
         embeddings
     )
 
+    st.success("Document processed!")
+
     question = st.text_input(
-        "Ask something about the document"
+        "Ask a question about the document"
     )
 
     if question:
