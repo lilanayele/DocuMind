@@ -1,3 +1,4 @@
+
 # DocuMind
 
 DocuMind is a document question-answering app that allows users to upload PDF files and ask questions about the content.
@@ -21,8 +22,17 @@ DocuMind is a document question-answering app that allows users to upload PDF fi
 
 Install packages:
 
-bash
+```bash
 pip install -r requirements.txt
+````
+
 Run the app:
-bash
+
+```bash
 streamlit run app.py
+```
+
+## Author
+
+Lilan Getachew
+
